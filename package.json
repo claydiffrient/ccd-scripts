@@ -1,10 +1,13 @@
 {
   "name": "ccd-scripts",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0-development",
   "description": "\"react-scripts like package for my stuff\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz",
+    "semantic-release":
+      "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
@@ -21,12 +24,21 @@
     "babel-core": "^6.26.0",
     "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.0",
+    "commitizen": "^2.9.6",
     "eslint": "^4.8.0",
     "eslint-config-prettier": "^2.6.0",
     "husky": "^0.14.3",
     "jest": "^21.2.1",
     "lint-staged": "^4.2.3",
-    "prettier": "^1.7.4",
+    "prettier": "^1.7.4"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.0.0",
     "semantic-release": "^8.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
